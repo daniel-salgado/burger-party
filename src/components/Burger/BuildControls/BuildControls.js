@@ -25,7 +25,9 @@ const buildControls = (props) => (
             />
         ))}
 
-        <button>Order Now</button>
+        <button
+            className={classes.OrderButton}
+            disabled={!props.purchaseble}>Order Now</button>
 
     </AuxWithClass>
 
