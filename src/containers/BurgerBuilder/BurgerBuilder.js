@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Aux from '../../hoc/Aux';
+import Auxiliary from '../../hoc/Auxiliary';
 import Burger from '../../components/Burger/Burger';
 import BuildControls from '../../components/Burger/BuildControls/BuildControls';
 import Modal from '../../components/UI/Modal/Modal';
@@ -140,7 +140,7 @@ class BurgerBuilder extends Component {
         }
 
         return (
-            <Aux>
+            <Auxiliary>
                 {/*Modal could be in a variable, But the animation will not work*/}
                 <Modal show={this.state.purchasing} modalClosed={this.purchaseCancelHandler}>
                     <OrderSummary
@@ -162,7 +162,7 @@ class BurgerBuilder extends Component {
                     ordered={this.purchaseHandler}
                 />
 
-            </Aux>
+            </Auxiliary>
 
         );
 

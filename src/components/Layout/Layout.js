@@ -1,11 +1,11 @@
 import React from 'react';
-import Aux from '../../hoc/Aux';
+import Auxiliary from '../../hoc/Auxiliary';
 import classes from './Layout.css';
 import Toolbar from '../Navigation/Toolbar/Toolbar';
 
 const layout = (props) => (
 
-    <Aux>
+    <Auxiliary>
   
 
         <Toolbar />
@@ -14,7 +14,7 @@ const layout = (props) => (
             {props.children}
         </main>
 
-    </Aux>
+    </Auxiliary>
 
 );
 
