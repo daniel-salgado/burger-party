@@ -141,10 +141,11 @@ class BurgerBuilder extends Component {
 
         return (
             <Aux>
-
+                {/*Modal could be in a variable, But the animation will not work*/}
                 <Modal show={this.state.purchasing} modalClosed={this.purchaseCancelHandler}>
                     <OrderSummary
                         ingredients={this.state.ingredients}
+                        price={this.state.totalPrice}
                         purchaseCancelled={this.purchaseCancelHandler}
                         purchaseContinued={this.purchaseContinueHandler}
                     />
@@ -152,18 +153,18 @@ class BurgerBuilder extends Component {
 
                 <Burger ingredients={this.state.ingredients} />
 
-                    <BuildControls
-                        ingredientAdded={this.addIngredientHandler}
-                        ingredientRemoved={this.removeIngredientHandler}
-                        disabled={disabledInfo}
-                        price={this.state.totalPrice}
-                        purchaseble={this.state.purchaseble}
-                        ordered={this.purchaseHandler}
-                    />
+                <BuildControls
+                    ingredientAdded={this.addIngredientHandler}
+                    ingredientRemoved={this.removeIngredientHandler}
+                    disabled={disabledInfo}
+                    price={this.state.totalPrice}
+                    purchaseble={this.state.purchaseble}
+                    ordered={this.purchaseHandler}
+                />
 
             </Aux>
 
-                );
+        );
 
     }
 
